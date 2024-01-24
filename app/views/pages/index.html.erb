@@ -1,2 +1,589 @@
-<h1>Home</h1>
-<%= link_to 'Sign in', new_user_session_path %>
+<nav class="navbar navbar-expand-md navbar-dark bg-white pt-3 pb-3">
+<div class="container">
+    <a class="navbar-brand" href="javascript:void(0)"><%= image_tag("logo.png" ,alt:"logo") %></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="mynavbar">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link active" href="javascript:void(0)">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="javascript:void(0)">About Us</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="javascript:void(0)">Services</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="javascript:void(0)">Contact</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="javascript:void(0)">Careers</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="javascript:void(0)">Job Posting</a>
+            </li>
+        </ul>
+    </div>
+</div>
+</nav>
+<section class="banner">
+<div id="demo" class="carousel slide" data-bs-ride="carousel">
+<div class="carousel-inner">
+<div class="carousel-item ">
+<%= video_tag("video1.mov", autoplay: true, loop: true, muted: true, type: "video/mp4") %>
+</div>
+<div class="carousel-item ">
+<%= video_tag("video2.mov", autoplay: true, loop: true, muted: true, type: "video/mp4") %> 
+</div>
+<div class="carousel-item active">
+<%= video_tag("video3.mov", autoplay: true, loop: true, muted: true, type: "video/mp4") %>
+</div>
+</div>
+<button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+        <span class="left-icon"> <span class="carousel-control-prev-icon"></span></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+        <span class="left-icon"> <span class="carousel-control-next-icon"></span></span>
+    </button>
+</div>
+</section>
+<section class="service-main">
+<div class="container">
+<span class="service-offer">WHAT WE OFFER</span>
+<h1>The best solutions for your business - what we do.</h1>
+<p>25+ years experience in business and finance consulting, IT solutions, and working with 5k+ clients over
+    the world.<br />
+    Creation timelines for the digital consulting business theme 2021.</p>
+
+<div class="row service-box-main">
+    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+        <div class="service-box text-center">
+           <spna class="image"> <%= image_tag("it.png") %></span>
+            <span class="service-heading">Managed IT Services</span>
+            <span class="service-text">Reduce your business's risk
+                with our managed IT services.
+                Let's help you grow your business
+                by outsourcing your IT needs.
+                Our experts will evaluate your current
+                infrastructure and recommend the
+                most efficient and beneficial plan
+                for your business.</span>
+            <span class="read-more"><a href="#">More <i class="fa fa-long-arrow-right"></i></a> </span>
+        </div>
+    </div>
+    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+        <div class="service-box text-center">
+            
+            <span class="image"><%= image_tag("custom-softwere.png")%></span>
+            <span class="service-heading">Custom Software Solutions</span>
+            <span class="service-text">Get your desired product
+                development services that can
+                cater to your business. CIS
+                Tech is a leading provider of
+                end-to-end technology services.
+                Contact us today for effective
+                Custom Software Solutions.</span>
+            <span class="read-more"><a href="#">More <i class="fa fa-long-arrow-right"></i></a> </span>
+        </div>
+    </div>
+    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+        <div class="service-box text-center">
+            <span class="image"><%= image_tag("it-staff.png",alt:"Managed IT Services") %></span>
+            <span class="service-heading">IT Staffing & Services</span>
+            <span class="service-text">Deliver excellence through our
+                technology solutions and transform
+                customer experiences. Hire excellent
+                talents with our IT Staffing & Services.
+                Take advantage of our global network.
+                Through our consulting and expertise,
+                you can stay on top of client needs.</span>
+            <span class="read-more"><a href="#">More <i class="fa fa-long-arrow-right"></i></a> </span>
+        </div>
+    </div>
+</div>
+</div>
+
+</section>
+<section class="about-section">
+<div class="container">
+<div class="row">
+<div class="col-xl-6 col-lg-6">
+    <span><%= image_tag("who-we-banner.png", alt:"who We are",class:"about-image") %></span>
+</div>
+<div class="col-xl-6 col-lg-6 who-be-text">
+    <span class="text-who">WHO WE ARE</span>
+    <h2>Our experts are dedicated to provide
+        the optimal outcomes</h2>
+    <p>At CIS Tec, our dedicated highly-trained technical professionals
+        focus exclusively on helping our clients resolve their challenges.</p>
+    <p>Weare a team of transparent, clear, and client-friendly to ensure
+        excellent outcomes on every project we take on.</p>
+    <ul>
+        <li>We are endorsed by the local trading standards office</li>
+        <li>We are endorsed by the local trading standards office</li>
+        <li>We are endorsed by the local trading standards office</li>
+        <li>We are endorsed by the local trading standards office</li>
+    </ul>
+</div>
+</div>
+</div>
+</section>
+<section class="why-choose-us-main bimage">
+<div class="container">
+<div class="row">
+<div class="col-xl-6 col-lg-5 col-md-12 col-sm-12 col-12">
+    <h3>WHY CHOOSE US</h3>
+    <p>Our highly committed team will help our clients to overcome the challengesin improving
+        productivity and providing the highest quality of service such as custom software solutions, IT
+        staffing & services and managed it services.
+    </p>
+    <p> We build strong relationships with customers by enhancing every stage of their efficiency
+        campaign.Our clients are pleased with our services and we always win 100% customer satisfaction.
+    </p>
+</div>
+<div class="col-xl-6 col-lg-7 col-md-12 col-sm-12 col-12">
+    <h3>Core Values:</h3>
+    <p>The values that guide our thriving excellence are:
+    </p>
+    <div class="core-value-main">
+        <div class="row">
+            <div class="col-xl-6 col-md-6 col-lg-6 col-sm-12 col-12">
+                <span class="enabling-customer">Enabling customer success</span>
+                <ul>
+                    <li>Focusing on customer satisfaction</li>
+                    <li>Quality over quantity</li>
+                    <li>Resolving client issues</li>
+                </ul>
+            </div>
+            <div class="col-xl-6 col-md-6 col-lg-6 col-sm-12 col-12">
+                <span class="enabling-customer">Challenges</span>
+                <ul>
+                    <li>Taking ownership of tasks</li>
+                    <li>Upgrading our skills regularly</li>
+                    <li>Striving for excellence</li>
+                    <li>Facilitating client success</li>
+                    <li>Acquiring advanced technologies</li>
+                    <li>Extending product functionality</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</section>
+<section class="our-statistics">
+<div class="container">
+<span class="our-statistics-text">OUR STATISTICS</span>
+<span class="heading-success">Learn about Our Success</span>
+<div class="row our-statistics-mt">
+<div class="col-xl-3 col-12 col-sm-6 col-md-6 col-lg-3">
+    <div class="our-statistics-box">
+        <span class="project-image"><%= image_tag("project.png", alt:"project", class:"project")%></span>
+        <span class="project-heading">582</span>
+        <span class="project-text">Projects completed for <br />
+            our respected clients.</span>
+    </div>
+</div>
+<div class="col-xl-3 col-12 col-sm-6 col-md-6 col-lg-3">
+    <div class="our-statistics-box">
+        <span class="project-image"><%= image_tag("client.png", alt:"project", class:"project")%></span>
+        <span class="project-heading">156 +</span>
+        <span class="project-text">Experienced people
+            <br />
+            serving to clients.</span>
+    </div>
+</div>
+<div class="col-xl-3 col-12 col-sm-6 col-md-6 col-lg-3">
+    <div class="our-statistics-box">
+        <span class="project-image"><%= image_tag("exprince.png",alt:"project",class:"project")%></span>
+        <span class="project-heading">18 +</span>
+        <span class="project-text">Years experience in
+            <br />
+            business & consulting.</span>
+    </div>
+</div>
+<div class="col-xl-3 col-12 col-sm-6 col-md-6 col-lg-3">
+    <div class="our-statistics-box">
+        <span class="project-image"><%= image_tag("awward.png",alt:"project", class:"project") %></span>
+        <span class="project-heading">51 +</span>
+        <span class="project-text">Business & consulting
+            <br />
+            awards won over world.</span>
+    </div>
+</div>
+</div>
+</div>
+</section>
+<section class="recent-work-main">
+<div class="container">
+<div class="recent-work-text">
+RECENT WORK
+</div>
+<div class="recent-work-heading">
+We blend business ideas to create something awesome.
+</div>
+
+<div class="recent-work-sub-text">
+25+ years experience in business and finance consulting, IT solutions, and working with 5k+ clients over
+the
+world. <br />
+Creation timelines for the digital consulting business theme 2021.
+</div>
+<div class="row">
+<div class="col-xl-3 col-sm-6 col-md-6 col-lg-3 col-12">
+    <div class="recent-work-box">
+        <div class="recent-work-images">
+            <%= image_tag("sales.png", alt:"Sales Analysis", class:"sales-image") %>
+        </div>
+        <div class="recent-work-analysis">Sales analysis</div>
+        <div class="recent-work-analysis-text">Financial</div>
+
+
+    </div>
+</div>
+<div class="col-xl-3 col-sm-6 col-md-6 col-lg-3 col-12">
+    <div class="recent-work-box">
+        <div class="recent-work-images">
+            <%= image_tag("stock.png" , alt:"Sales Analysis" , class:"sales-image")%>
+
+        </div>
+        <div class="recent-work-analysis">Stock investments</div>
+        <div class="recent-work-analysis-text">Tax Consulting</div>
+
+
+    </div>
+</div>
+<div class="col-xl-3 col-sm-6 col-md-6 col-lg-3 col-12">
+    <div class="recent-work-box">
+        <div class="recent-work-images">
+            <%= image_tag("advertise.png", alt:"Sales Analysis", class:"sales-image")%>
+        </div>
+        <div class="recent-work-analysis">Advertising Technology</div>
+        <div class="recent-work-analysis-text">Business Strategy</div>
+
+
+    </div>
+</div>
+<div class="col-xl-3 col-sm-6 col-md-6 col-lg-3 col-12">
+    <div class="recent-work-box">
+        <div class="recent-work-images">
+            <%= image_tag("business-planning.png", alt:"Sales Analysis", class:"sales-image") %>
+        </div>
+        <div class="recent-work-analysis">Business planning</div>
+        <div class="recent-work-analysis-text">Investment</div>
+    </div>
+</div>
+</div>
+</div>
+</section>
+<section class="working-process-main">
+<div class="container">
+    <div class="process-text">WORKING PROCESS</div>
+    <div class="process-heading">How we work for our valued customers.</div>
+    <div class="row">
+        <div class="col-xl-12">
+            <div class="process-wrap active-step1">
+                <div class="process-main">
+                    <div class="col-6 col-xl-3 col-md-3 col-lg-3 col-sm-3 process-sytem">
+                        <div class="process-step-cont">
+                            <div class="process-step step-1">
+                            <%= image_tag("discovery.png", alt:"",class:"discovery") %>
+                                        </div>
+                            <span class="process-label">Discovery</span>
+
+                        </div>
+                    </div>
+                    <div class="col-6 col-xl-3 col-md-3 col-lg-3 col-sm-3">
+                        <div class="process-step-cont">
+                            <div class="process-step step-2">
+                            <%= image_tag("planing.png",class:"discovery") %>
+                                        </div>
+                            <span class="process-label">Planning</span>
+                        </div>
+                    </div>
+                    <div class="col-6 col-xl-3 col-md-3 col-lg-3 col-sm-3">
+                        <div class="process-step-cont">
+                            <div class="process-step step-3">
+                            <%= image_tag("excute.png",alt:"",class:"discovery") %>
+                                        </div>
+                            <span class="process-label">Execute</span>
+                        </div>
+                    </div>
+                    <div class="col-6 col-xl-3 col-md-3 col-lg-3 col-sm-3">
+                        <div class="process-step-cont">
+                            <div class="process-step step-4">
+                            <%= image_tag("delivery.png", alt:"",class:"discovery") %>
+                                        </div>
+                            <span class="process-label">Deliver</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+<section class="testomonials-main">
+<div class="container">
+<div class="row">
+    <div class="col-xl-4">
+        <div class="main-client">
+            <span class="testomonials-text">TESTIMONIALS</span>
+            <span class="customer-heading">Whats our customers
+                saying about us</span>
+        </div>
+    </div>
+    <div class="col-xl-8">
+        <div id="testomonials" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#testomonials" data-bs-slide-to="0"
+                    class="active"></button>
+                <button type="button" data-bs-target="#testomonials" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#testomonials" data-bs-slide-to="2"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                            <div class="testomonials-bg">
+                                <div class="quote">
+                                <%= image_tag("quote.png",alt:"") %>
+                                </div>
+                                <div class="testomonials-client-text">Excellent educational standards! as
+                                    well as effective communication... My knowledge was completely empty
+                                    when I started my full stack programming course. This trainingis
+                                    extremely beneficial to both beginners and professionals. They were
+                                    thorough in their explanations of any doubts or topics.</div>
+                                <div class="client-main">
+                                    <div class="client-image">
+                                    <%= image_tag("client-1.png", alt:"",class:"images-cleint-testomoinail") %>
+                                            </div>
+                                    <div class="client-name-main">
+                                        <div class="name">Raj Kumar</div>
+                                        <div class="rating"><i class="fa fa-star" aria-hidden="true"></i><i
+                                                class="fa fa-star" aria-hidden="true"></i><i
+                                                class="fa fa-star" aria-hidden="true"></i><i
+                                                class="fa fa-star" aria-hidden="true"></i><i
+                                                class="fa fa-star" aria-hidden="true"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                            <div class="testomonials-bg">
+                                <div class="quote">
+                                <%= image_tag("quote.png", alt:"") %>
+                                </div>
+                                <div class="testomonials-client-text">Good for Beginners to understand the
+                                    basic knowledge of Salesforce. CIS Tec provides a full-fledged course in
+                                    the most informative and well-chosen modules. This is the most optional
+                                    course with the most qualified experts.</div>
+                                <div class="client-main">
+                                    <div class="client-image">
+                                    <%= image_tag("client-2.png", alt:"", class:"images-cleint-testomoinail") %>
+                                            </div>
+                                    <div class="client-name-main">
+                                        <div class="name">Keerti</div>
+                                        <div class="rating"><i class="fa fa-star" aria-hidden="true"></i><i
+                                                class="fa fa-star" aria-hidden="true"></i><i
+                                                class="fa fa-star" aria-hidden="true"></i><i
+                                                class="fa fa-star" aria-hidden="true"></i><i
+                                                class="fa fa-star-half-o" aria-hidden="true"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                            <div class="testomonials-bg">
+                                <div class="quote">
+                                <%= image_tag("quote.png", alt:"") %>
+                                </div>
+                                <div class="testomonials-client-text">Excellent educational standards! as
+                                    well as effective communication... My knowledge was completely empty
+                                    when I started my full stack programming course. This trainingis
+                                    extremely beneficial to both beginners and professionals. They were
+                                    thorough in their explanations of any doubts or topics.</div>
+                                <div class="client-main">
+                                    <div class="client-image">
+                                    <%= image_tag("client-1.png", alf:"" , class:"images-cleint-testomoinail rounded-circle") %>
+                                            </div>
+                                    <div class="client-name-main">
+                                        <div class="name">Raj Kumar</div>
+                                        <div class="rating"><i class="fa fa-star" aria-hidden="true"></i><i
+                                                class="fa fa-star" aria-hidden="true"></i><i
+                                                class="fa fa-star" aria-hidden="true"></i><i
+                                                class="fa fa-star" aria-hidden="true"></i><i
+                                                class="fa fa-star" aria-hidden="true"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                            <div class="testomonials-bg">
+                                <div class="quote">
+                                <%= image_tag("quote.png", alt:"") %>
+                                </div>
+                                <div class="testomonials-client-text">Good for Beginners to understand the
+                                    basic knowledge of Salesforce. CIS Tec provides a full-fledged course in
+                                    the most informative and well-chosen modules. This is the most optional
+                                    course with the most qualified experts.</div>
+                                <div class="client-main">
+                                    <div class="client-image">
+                                    <%= image_tag("client-2.png" , alt:"", class:"images-cleint-testomoinail") %>
+                                            </div>
+                                    <div class="client-name-main">
+                                        <div class="name">Keerti</div>
+                                        <div class="rating"><i class="fa fa-star" aria-hidden="true"></i><i
+                                                class="fa fa-star" aria-hidden="true"></i><i
+                                                class="fa fa-star" aria-hidden="true"></i><i
+                                                class="fa fa-star" aria-hidden="true"></i><i
+                                                class="fa fa-star-half-o" aria-hidden="true"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                            <div class="testomonials-bg">
+                                <div class="quote">
+                                <%= image_tag("quote.png" , alt:"") %>
+                                </div>
+                                <div class="testomonials-client-text">Excellent educational standards! as
+                                    well as effective communication... My knowledge was completely empty
+                                    when I started my full stack programming course. This trainingis
+                                    extremely beneficial to both beginners and professionals. They were
+                                    thorough in their explanations of any doubts or topics.</div>
+                                <div class="client-main">
+                                    <div class="client-image">
+                                    <%= image_tag("client-1.png", alt:"",class:"images-cleint-testomoinail rounded-circle") %>
+                                            </div>
+                                    <div class="client-name-main">
+                                        <div class="name">Raj Kumar</div>
+                                        <div class="rating"><i class="fa fa-star" aria-hidden="true"></i><i
+                                                class="fa fa-star" aria-hidden="true"></i><i
+                                                class="fa fa-star" aria-hidden="true"></i><i
+                                                class="fa fa-star" aria-hidden="true"></i><i
+                                                class="fa fa-star" aria-hidden="true"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                            <div class="testomonials-bg">
+                                <div class="quote">
+                                <%= image_tag("quote.png", alt:"") %>
+                                </div>
+                                <div class="testomonials-client-text">Good for Beginners to understand the
+                                    basic knowledge of Salesforce. CIS Tec provides a full-fledged course in
+                                    the most informative and well-chosen modules. This is the most optional
+                                    course with the most qualified experts.</div>
+                                <div class="client-main">
+                                    <div class="client-image">
+                                    <%= image_tag("client-2.png", alt:"", class:"images-cleint-testomoinail") %>
+                                            </div>
+                                    <div class="client-name-main">
+                                        <div class="name">Keerti</div>
+                                        <div class="rating"><i class="fa fa-star" aria-hidden="true"></i><i
+                                                class="fa fa-star" aria-hidden="true"></i><i
+                                                class="fa fa-star" aria-hidden="true"></i><i
+                                                class="fa fa-star" aria-hidden="true"></i><i
+                                                class="fa fa-star-half-o" aria-hidden="true"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</section>
+<section class="footer-main">
+<div class="container">
+    <div class="row">
+        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+            <div class="footer-heading">Contact Info</div>
+            <div class="contact-information">
+                <div class="location">
+                <%= image_tag("location.png", alt:"") %>
+                </div>
+                <div class="location-text">7200 W University Dr, Suite #150,
+                    McKinney, TX 75071</div>
+            </div>
+            <div class="contact-information">
+                <div class="location">
+                <%= image_tag("call.png", alt:"") %>
+                </div>
+                <div class="location-text"><a href="tel:+3664114999">366 411 4999</a> </div>
+            </div>
+            <div class="contact-information">
+                <div class="location"><%= image_tag("email.png", alt:"") %></div>
+                <div class="location-text"><a href="mailto:example@mail.com">example@mail.com</a></div>
+            </div>
+<div class="footer-social-icon">
+<ul>
+<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+</ul>
+</div>
+
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+            <div class="footer-heading">Our Services</div>
+            <div class="contact-information">
+                <div class="location-text"><a href="#">Software Solutions</a>
+                </div>
+            </div>
+            <div class="contact-information">
+                <div class="location-text"> <a href="#">Staffing & Services</a></div>
+            </div>
+            <div class="contact-information">
+                <div class="location-text"><a href="#">IT Services</a> </div>
+            </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+            <div class="footer-heading">Newsletter</div>
+            <div class="contact-information">
+
+                <div class="location-text">Stay up to update with our latest
+                    news and products.
+                </div>
+            </div>
+            <div class="contact-information">
+                <div class="location-text"><a href="#">H1B- Sponsors</a></div>
+            </div>
+            <div class="contact-information">
+                <div class="location-text"><a href="#">MyvisaJobs</a></div>
+            </div>
+            <div class="contact-information">
+                <div class="location-text"><a href="#">Glassdoor</a></div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+<section class="copyright-main">
+<div class="container">
+    <div class="col-xl-12">
+        Copyright ©2023 XXX. All rights reserved.
+    </div>
+</div>
+</section>
