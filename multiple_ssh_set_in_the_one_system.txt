@@ -1,0 +1,30 @@
+Run this command into ssh folder
+
+ssh-keygen -t ed25519 -C "parth.logicalstreet@gmail.com"
+# filename :- parth
+ssh-keygen -t ed25519 -C "milan.logicalstreet@gmail.com"
+# filename :- milan
+
+ssh-add ~/.ssh/parth
+ssh-add ~/.ssh/milan
+
+#### #### #### #### #### #### #### #### #### #### 
+##### Update config file in the ssh folder #####  
+#### #### #### #### #### #### #### #### #### ####
+ 
+Host github.com-parth
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/parth
+
+Host github.com-milan
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/milan
+
+####################################################
+Clone Repo URL :-
+FROM
+git clone git@github.com:ppatel101/aws-rails-app.git 
+TO
+git clone github.com-parth:ppatel101/aws-rails-app.git
