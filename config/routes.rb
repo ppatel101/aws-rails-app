@@ -8,6 +8,8 @@ Rails.application.routes.draw do
 
   root 'pages#index'
   get 'pages/index'
-  # Defines the root path route ("/")
-  # root "posts#index"
+  get '/about', to: 'pages#about', as: 'about_page'
+  get '/contact_us', to: 'pages#contact_us', as: 'contact_us_page'
+  get 'users/profile', to: 'users#profile', as: 'user_profile'
+  resources :users
 end

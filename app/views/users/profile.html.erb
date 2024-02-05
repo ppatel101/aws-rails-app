@@ -1,0 +1,430 @@
+<head>
+  <style>
+    body {
+      font-family: 'Roboto';
+    }
+    .round-text {
+      font-size: 8rem;
+      height: 15rem;
+      width: 15rem;
+      background: #5755d9;
+      border-radius: 50%;
+      border: 1px solid #ccc;
+    }
+    .avatar {
+      text-align: center;
+      border-radius: 50%;
+      font-size: 2rem;
+      background: darkgray;
+      line-height: 5rem;
+      cursor: pointer;
+      width: 5rem;
+      height: 5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      top: 190px;
+      right: -90px;
+      position: relative;
+    }
+    .update-profile-main {
+      padding: 1rem;
+      background: #f8f9fa;
+      border-radius: 0.3rem;
+    }
+    :root {
+      --header-height: 3rem;
+      --nav-width: 250px;
+      --first-color: #f7f9fa;
+      --first-color-light: #000;
+      --body-font: 'Nunito', sans-serif;
+      --normal-font-size: 1rem;
+      --z-fixed: 100
+    }
+    *,
+    ::before,
+    ::after {
+      box-sizing: border-box
+    }
+    body {
+      position: relative;
+      margin: var(--header-height) 0 0 0;
+      padding: 0 1rem;
+      font-family: var(--body-font);
+      font-size: var(--normal-font-size);
+      transition: .5s
+    }
+    a {
+      text-decoration: none
+    }
+    .header {
+      width: 100%;
+      height: var(--header-height);
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 1rem;
+      background-color: #fff;
+      z-index: var(--z-fixed);
+      transition: .5s;
+      box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+    }
+    .header_toggle {
+      color: var(--first-color-light);
+      font-size: 1.5rem;
+      cursor: pointer
+    }
+    .header_img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      border: 1px solid #d95000;
+      cursor: pointer;
+      color: #d95000;
+      background: #fff;
+    }
+    .header_img:hover {
+      background: #d95000;
+      border-color: #d95000;
+      color: #fff;
+    }
+    .l-navbar {
+      position: fixed;
+      top: 0;
+      left: -30%;
+      width: var(--nav-width);
+      height: 100vh;
+      background-color: var(--first-color);
+      padding: .5rem 1rem 0 0;
+      transition: .5s;
+      z-index: var(--z-fixed)
+    }
+    .nav {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden
+    }
+    .nav_logo,
+    .nav_link {
+      display: grid;
+      grid-template-columns: max-content max-content;
+      align-items: center;
+      column-gap: 1rem;
+      padding: .5rem 0 .5rem 1.5rem
+    }
+    .nav_logo {
+      margin-bottom: 2rem
+    }
+    .nav_logo-icon {
+      font-size: 1.25rem;
+      color: var(--white-color)
+    }
+    .nav_logo-name {
+      color: var(--white-color);
+      font-weight: 700
+    }
+    .nav_link {
+      position: relative;
+      color: var(--first-color-light);
+      margin-bottom: 1.5rem;
+      transition: .3s
+    }
+    .nav_link:hover {
+      color: var(--white-color)
+    }
+    .nav_icon {
+      font-size: 1.25rem
+    }
+    .show {
+      left: 0
+    }
+    .body-pd {
+      padding-left: calc(var(--nav-width) + 1rem)
+    }
+    .active {
+      color: var(--white-color)
+    }
+    .active::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      width: 2px;
+      height: 32px;
+      background-color: var(--white-color)
+    }
+    .height-100 {
+      height: 100vh
+    }
+    @media screen and (min-width: 768px) {
+      body {
+        margin: calc(var(--header-height) + 1rem) 0 0 0;
+        padding-left: calc(var(--nav-width) + 2rem)
+      }
+      .header {
+        height: calc(var(--header-height) + 1rem);
+        padding: 3rem 2rem 3rem calc(var(--nav-width) + 2rem)
+      }
+      .header_img {
+        width: 100px;
+        height: 40px
+      }
+      .header_img img {
+        width: 45px
+      }
+      .l-navbar {
+        left: 0;
+        padding: 1rem 1rem 0 0
+      }
+      .show {
+        width: calc(var(--nav-width) + 156px)
+      }
+      .body-pd {
+        padding-left: calc(var(--nav-width) + 188px)
+      }
+    }
+
+    .profile_modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      padding-top: 100px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgb(0, 0, 0);
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+    /* Modal Content */
+    .profile-modal-content {
+      background-color: #fefefe;
+      margin: auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 40%;
+      margin-top: 120px;
+    }
+    /* The Close Button */
+    .close {
+      color: #aaaaaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+    .close:hover,
+    .close:focus {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body id="body-pd">
+  <header class="header" id="header">
+    <div class="header_toggle" style="font-weight: bold;"> My Profile </div>
+    <div > <span class="nav_name"><%= link_to "Log Out" , destroy_user_session_path , class:"header_img" %></span> </div>
+  </header>
+  <div class="l-navbar" id="nav-bar">
+    <nav class="nav">
+      <div> 
+        <%= link_to("#", class: "nav_logo") do %>
+          <span class="nav_logo-name">
+            <%= image_tag("logo-1.png", alt: "logo") %>
+          </span>
+        <% end %>
+        <div class="nav_list">
+          <%= link_to(root_path, class: "nav_link") do %>
+            <i class="fa fa-home" aria-hidden="true"></i> <span class="nav_name">Home</span>
+          <% end %>
+          <%= link_to(about_page_path, class: "nav_link") do %>
+            <i class="fa fa-book" aria-hidden="true"></i> <span class="nav_name">About Us</span>
+          <% end %>      
+          <%= link_to("#", class: "nav_link") do %>
+            <i class="fa fa-envelope nav_icon"></i> <span class="nav_name">Services+</span>
+          <% end %>      
+          <%= link_to(contact_us_page_path, class: "nav_link") do %>
+            <i class="fa fa-envelope nav_icon"></i> <span class="nav_name">Contact</span>
+          <% end %>  
+          <%= link_to("#", class: "nav_link") do %>
+            <i class="fa fa-briefcase nav_icon"></i> <span class="nav_name">Careers</span>
+          <% end %>       
+          <%= link_to("#", class: "nav_link") do %>
+            <i class="fa fa-bell" aria-hidden="true"></i> <span class="nav_name">Job Posting</span>
+          <% end %>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <div class="height-100">
+    <div class="container" style="margin-top: 150px;">
+      <div class="row">
+        <div class="col-xl-6">
+          <h4>Profile Picture</h4>
+        </div>
+        <div class="col-xl-6">
+          <div class="round-text" data-initial="M" <% if @user.profile_photo.attached? %>style="background-image: url(<%= rails_blob_url(@user.profile_photo) %>)"<% end %>>
+            <div class="avatar" id="myBtn">
+              <%= image_tag("icon.png", alt: "") %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <%= form_with model: @user, url: user_url(id: current_user.id), html: { class: "form-horizontal", novalidate: true, data: { controller: "form", target: "form.form", action: "submit->form#submitForm" } } do |form| %>   
+        <div class="row" style="margin-top: 100px;">
+          <div class="col-xl-6">
+            <h4>Update Profile Details</h4>
+          </div>
+          <div class="col-xl-6">
+            <div class="update-profile-main">
+              <div class="mb-3 mt-3">
+                <%= form.label :first_name , style:"padding: .4rem 0;" , class:"form_label"%>
+                <span style="color: #f00;">*</span>
+                <%= form.text_field :first_name, class: "form-control" , style: "padding:15px", required: true %>
+                <div id="first_name_error" class="error-message"></div>
+              </div>
+              <div class="mb-3 mt-3">
+                <span>
+                <%= form.label :last_name , style:"padding: .4rem 0;" , class:"form_label"%>
+                <span style="color: #f00;">*</span>
+                <%= form.text_field :last_name, class: "form-control", style: "padding:15px" , required: true %>
+                <div id="last_name_error" class="error-message" ></div>
+              </div>
+              <div class="mb-3 mt-3">
+                <%= form.label :mobile_number , style:"padding: .4rem 0;" , class:"form_label"%>
+                <span style="color: #f00;">*</span>
+                <%= form.text_field :mobile_number, class: "form-control" , style: "padding:15px" , required: true %>
+                <div id="mobile_number_error" class="error-message"></div>
+              </div>
+              <div class="mb-3 mt-3">
+                <%= form.label :email , style:"padding: .4rem 0;" , class:"form_label"%>
+                <span><%= image_tag("check.png" ,
+                      alt:"") %></span>
+                <%= form.email_field :email, class: "form-control" , style: "padding:15px" , required: true , readonly: true %>
+                <div id="email_error" class="error-message"></div>
+              </div>
+              <div style="text-align: right;">
+                <%= form.submit "Save", class: "btn btn-primary submit-profile" , style:"background: #5755d9; border-radius: 0 !important;"%>  
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+      <%= form_with model: @user, url: user_url(id: current_user.id), html: { class: "form-horizontal", novalidate: true, data: { controller: "form", target: "form.form", action: "submit->form#submitForm" } } do |form| %> 
+        <div class="row" style="margin-top: 100px;">
+          <div class="col-xl-6">
+            <h4>Address Information</h4>
+          </div>
+          <div class="col-xl-6">
+            <div class="update-profile-main">
+              <div class="mb-3 mt-3">
+                <%= form.label :country , style:"padding: .4rem 0;" , class:"form_label"%>
+                <span style="color: #f00;">*</span>
+                <%= form.text_field :country, class: "form-control" , style: "padding:15px" , required: true %>
+                <div id="country_error" class="error-message"></div>
+              </div>
+              <div class="mb-3 mt-3">
+                <%= form.label :state , style:"padding: .4rem 0;" , class:"form_label"%>
+                <span style="color: #f00;">*</span>
+                <%= form.text_field :state, class: "form-control" , style: "padding:15px" , required: true %>
+                <div id="state_error" class="error-message"></div>
+              </div>
+              <div class="mb-3 mt-3">
+                <%= form.label :permanent_address , style:"padding: .4rem 0;" , class:"form_label"%>
+                <span style="color: #f00;">*</span>
+                <%= form.text_field :permanent_address, class: "form-control" , style: "padding:15px" , required: true %>
+                <div id="permanent_address_error" class="error-message"></div>
+              </div>
+              <div class="mb-3 mt-3">
+                <%= form.label :current_address , style:"padding: .4rem 0;" , class:"form_label"%>
+                <span style="color: #f00;">*</span>
+                <%= form.text_field :current_address, class: "form-control" , style: "padding:15px" , required: true %>
+                <div id="current_address_error" class="error-message"></div>
+              </div>
+              <div style="text-align: right;">
+                <%= form.submit "Save", class: "btn btn-primary submit-profile" , style:"background: #5755d9; border-radius: 0 !important;"%>  
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+      <%= form_with model: @user, url: user_url(id: current_user.id), html: { class: "form-horizontal", novalidate: true, data: { controller: "form", target: "form.form", action: "submit->form#submitForm" } } do |form| %> 
+        <div class="row" style="margin-top: 100px;">
+          <div class="col-xl-6">
+            <h4>Upload Document</h4>
+          </div>
+          <div class="col-xl-6">
+            <div class="update-profile-main">
+            <div class="mb-3">
+            <div class="col-sm-10">
+              <%= form.file_field :file, class: "form-control" , style: "padding-bottom:35px" ,accept: ".jpg , .png , .pdf"%>
+              <% if @user.file.attached? %>
+                <%= @user.file.filename.to_s %>
+              <% end %>
+            </div>
+          </div>
+              <div style="text-align: right;">
+                <%= form.submit "Save", class: "btn btn-primary submit-profile" , style:"background: #5755d9; border-radius: 0 !important;"%>  
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <div id="myModal" class="profile_modal">
+    <div class="profile-modal-content">
+    <%= form_with model: @user, url: user_url(id: current_user.id), html: { class: "form-horizontal", novalidate: true } do |form| %>   
+      <span style="display: flex; align-items: center; justify-content:space-between;">
+        <span style="font-size: 18px;">Profile Picture 
+          <span style="color: #aaaaaa; font-size: 16px;">[200x200]
+          </span>
+        </span>
+        <span class="close">&times;</span>
+      </span>
+        <div class="custom-file mb-3" style="border:1px solid #ccc; padding: 5px; margin-top: 15px; margin-bottom: 15px;">
+          <%= form.file_field :profile_photo, class: "custom-file-input", id: "customFile" %>
+        </div>
+        <div style="text-align: right;">
+          <%= form.submit "Save", class: "btn btn-primary submit" , style:"background: #5755d9; border-radius: 0 !important;"%>  
+        </div>
+      <% end %>  
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function (event) {
+    const showNavbar = (toggleId, navId, bodyId, headerId) => {
+      const toggle = document.getElementById(toggleId),
+        nav = document.getElementById(navId),
+        bodypd = document.getElementById(bodyId),
+        headerpd = document.getElementById(headerId)
+      if (toggle && nav && bodypd && headerpd) {
+        toggle.addEventListener('click', () => {
+          nav.classList.toggle('show')
+          toggle.classList.toggle('bx-x')
+          bodypd.classList.toggle('body-pd')
+          headerpd.classList.toggle('body-pd')
+        })
+      }
+    }
+      showNavbar('header-toggle', 'nav-bar', 'body-pd', 'header')
+      const linkColor = document.querySelectorAll('.nav_link')
+
+      function colorLink() {
+        if (linkColor) {
+          linkColor.forEach(l => l.classList.remove('active'))
+          this.classList.add('active')
+        }
+      }
+      linkColor.forEach(l => l.addEventListener('click', colorLink))
+    });
+  </script>
+</body>

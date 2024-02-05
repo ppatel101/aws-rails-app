@@ -1,0 +1,210 @@
+<div class="full-width-header">
+	<header id="rs-header" class="rs-header style2 header-transparent">
+		<div class="menu-area menu-sticky">
+			<div class="container custom">
+				<div class="row-table">
+					<div class="col-cell header-logo">                                  
+						<div class="logo-area">
+							<a href="#">
+								<%= image_tag("logo-1.png", alt:"logo") %>  
+							</a>
+						</div>
+					</div>
+					<div class="col-cell">
+						<div class="rs-menu-area">
+							<div class="main-menu">
+								<nav class="rs-menu hidden-md">
+									<ul class="nav-menu">
+										<li class="<%='current-menu-item' if params[:action] == 'index' %>">
+											<%= link_to "Home", root_path, remote: false %>
+										</li>
+										<li class="<%= 'current-menu-item' if params[:action] == 'about' %>">
+											<%= link_to "About Us" , about_page_path, remote: false %>
+										</li>
+										<li class="menu-item-has-children service">
+											<a   href="#">Services</a>
+											<ul class="sub-menu">
+												<li><a href="#">Custom Software Solutions</a></li>
+												<li><a href="#">IT Staffing & Services</a></li>
+												<li><a href="#">Managed IT Services</a></li>
+											</ul>
+										</li>
+										<li class="<%= 'current-menu-item' if params[:action] == 'contact_us' %>">
+											<%= link_to "Contact" , contact_us_page_path %>
+										</li>
+										<li class="career">
+											<a   href="#">Careers</a>
+										</li>
+										<li class="job-posting">
+											<a   href="#">Job Posting</a>
+										</li>
+										<% if current_user %>
+											<li class="">
+												<%= link_to "Profile" , user_profile_path %>
+											</li>
+											<li class="">
+												<%= link_to "Log Out" , destroy_user_session_path %>
+											</li>
+										<% else %>
+											<li class="">
+												<%= link_to "Sign In" , new_user_session_path %>
+											</li>
+										<% end %>
+									</ul>
+								</nav>
+							</div>
+						</div>
+					</div>
+					<div class="">
+						<div class="expand-btn-inner">
+							<ul>
+								<li class="humburger">
+									<a id="nav-expander" class="nav-expander bar" href="#">
+										<div class="bar">
+											<span class="dot1"></span>
+											<span class="dot2"></span>
+											<span class="dot3"></span>
+											<span class="dot4"></span>
+											<span class="dot5"></span>
+											<span class="dot6"></span>
+											<span class="dot7"></span>
+											<span class="dot8"></span>
+											<span class="dot9"></span>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<nav class="right_menu_togle hidden-md">
+			<div class="close-btn">
+				<a id="nav-close" class="nav-close">
+					<div class="line">
+						<span class="line1"></span>
+						<span class="line2"></span>
+					</div>
+				</a>
+			</div>
+			<div class="canvas-logo">
+				<a href="#"><%= image_tag("logo-1.png" , alt:"logo" ) %></a>
+			</div>
+			<div class="canvas-contact">
+				<div class="address-area">
+					<div class="address-list">
+						<div class="info-icon">
+							<i class="flaticon-location"></i>
+						</div>
+						<div class="info-content">
+							<h4 class="title">Address</h4>
+							<em>7200 W University Dr, Suite #150, McKinney, TX 75071
+							</em>
+						</div>
+					</div>
+					<div class="address-list">
+						<div class="info-icon">
+							<i class="flaticon-email"></i>
+						</div>
+						<div class="info-content">
+							<h4 class="title">Email</h4>
+							<em><a href="mailto:hr@cis-tec.com">hr@cis-tec.com</a></em>
+						</div>
+					</div>
+					<div class="address-list">
+						<div class="info-icon">
+							<i class="flaticon-call"></i>
+						</div>
+						<div class="info-content">
+							<h4 class="title">Phone</h4>
+								<em><a href="tel:956-465-4747">956-465-4747</a></em>
+						</div>
+					</div>
+				</div>
+				<ul class="social">
+					<li> 
+						<a href="#" target="_blank"><span><i class="fa fa-facebook"></i></span></a> 
+					</li>
+					<li> 
+						<a href="#" target="_blank"><span><i class="fa fa-twitter"></i></span></a> 
+					</li>
+					<li> 
+						<a href="#" target="_blank"><span><i class="fa fa-linkedin"></i></span></a> 
+					</li>
+					<li> 
+						<a href="#" target="_blank"><span><i class="fa fa-instagram"></i></span></a> 
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<nav class="right_menu_togle mobile-navbar-menu" id="mobile-navbar-menu">
+			<div class="close-btn hash-has-sub">
+				<a id="nav-close2" class="nav-close hash">
+					<div class="line">
+						<span class="line1"></span>
+						<span class="line2"></span>
+					</div>
+				</a>
+			</div>
+			<ul class="nav-menu">
+				<li class="hash-has-sub current-menu-item">
+					<a href="#" class="hash">Home</a>
+				</li>
+				<li class="hash-has-sub current-menu-item">
+					<a href="#" class="hash">About Us</a>
+				</li>
+				<li class="menu-item-has-children hash-has-sub">
+					<a href="#" class="hash">Services</a>
+					<ul class="sub-menu">
+						<li><a href="#">Custom Software Solutions</a></li>
+						<li><a href="#">IT Staffing & Services</a></li>
+						<li><a href="#">Managed IT Services</a></li>
+					</ul>
+				</li>
+				<li class="hash-has-sub current-menu-item">
+					<a href="#" class="hash">Contact</a>
+				</li>
+				<li class="hash-has-sub current-menu-item">
+					<a href="#" class="hash">Careers</a>
+				</li>
+				<li class="hash-has-sub current-menu-item">
+					<a href="#" class="hash">Job Posting</a>
+				</li>
+			</ul> 
+			<div class="canvas-contact">
+				<div class="address-area">
+					<div class="address-list">
+						<div class="info-icon">
+							<i class="flaticon-location"></i>
+						</div>
+						<div class="info-content">
+							<h4 class="title">Address</h4>
+							<em>7200 W University Dr, Suite #150, McKinney, TX 75071</em>
+						</div>
+					</div>
+					<div class="address-list">
+						<div class="info-icon">
+							<i class="flaticon-email"></i>
+						</div>
+						<div class="info-content">
+							<h4 class="title">Email</h4>
+							<em class="hash-has-sub"><a href="mailto:hr@cis-tec.com" class="hash">hr@cis-tec.com</a></em>
+						</div>
+					</div>
+					<div class="address-list">
+						<div class="info-icon">
+							<i class="flaticon-call"></i>
+						</div>
+						<div class="info-content">
+							<h4 class="title">Phone</h4>
+							<em><a href="tel:956-465-4747">956-465-4747</a></em>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+	</header>
+</div>
+
+
