@@ -1,7 +1,4 @@
-
 import { Controller } from "@hotwired/stimulus";
-
-
 export default class extends Controller {
 	static targets = ['form'];
 
@@ -14,6 +11,7 @@ export default class extends Controller {
 	
 	validateForm() {
 		let isValid = true;
+		let errorMessage = '';
 		let requiredFieldSelectors = 'textarea:required, input:required';
 		let requiredFields = Array.from(this.formTarget.querySelectorAll(requiredFieldSelectors));
 
@@ -21,37 +19,37 @@ export default class extends Controller {
 				return Array.from(this.formTarget.elements).indexOf(a) - Array.from(this.formTarget.elements).indexOf(b);
 		});
 
-		for (let field of requiredFields) {
-			if (!field.disabled && !field.value.trim()) {
-				let fieldName = field.name.match(/\[(.*?)\]/)[1].replace(/_/g, ' '); 
-				let errorMessageElement = document.getElementById(fieldName.replace(/ /g, "_") + "_error");
-				if (errorMessageElement) {
-					errorMessageElement.textContent = "Please enter valid " + fieldName;
-				}
-				field.focus();
-				isValid = false;
-				break;
-			}
-			if (!field.disabled && field.value.trim()) {
-				let fieldName = field.name.match(/\[(.*?)\]/)[1].replace(/_/g, ' '); 
-				let errorMessageElement = document.getElementById(fieldName.replace(/ /g, "_") + "_error");
-				if (errorMessageElement) {
-					errorMessageElement.textContent = "";
-				}
-				field.focus();
-				isValid = true;
-				break;
-			}		
-			
-		}
-		
-		if (!isValid) {
-			return false;
-		}
-		return isValid;
-  }
+	for (let field of requiredFields) {
+    field.addEventListener('input', () => {
+        const fieldName = field.name.match(/\[(.*?)\]/)[1].replace(/_/g, ' ');
+        let errorMessageElement = document.getElementById(fieldName.replace(/ /g, "_") + "_error");
+        if (errorMessageElement) {
+            errorMessageElement.textContent = ""; // Clear the error message
+        }
+    });
 
-	
+    if (!field.disabled && !field.value.trim()) {
+        const fieldName = field.name.match(/\[(.*?)\]/)[1].replace(/_/g, ' ');
+        errorMessage = "Please enter valid " + fieldName;
+        let errorMessageElement = document.getElementById(fieldName.replace(/ /g, "_") + "_error");
+        if (errorMessageElement) {
+            errorMessageElement.textContent = errorMessage;
+        }
+        console.log("Required field is empty:", field);
+        field.focus();
+        isValid = false;
+        break;
+    }
+}
+
+
+	if (!isValid) {
+		return false;
+	}
+
+	return isValid;
+}
+
 }
 
 
