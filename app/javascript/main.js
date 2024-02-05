@@ -32,6 +32,20 @@
 			});
     });
 
+		 // scrollTop init	
+		 var totop = $('#scrollUp');    
+		 win.on('scroll', function() {
+			 if (win.scrollTop() > 150) {
+				 totop.fadeIn();
+			 } else {
+				 totop.fadeOut();
+			 }
+		 });
+		 totop.on('click', function() {
+			 $("html,body").animate({
+				 scrollTop: 0
+			 }, 500)
+		 });
 
     $(document).ready(function() {
 			var modal = $("#myModal");
@@ -344,22 +358,6 @@
 				decimals: 0,    
 			});
     }
-  
-    
-    // scrollTop init	
-    var totop = $('#scrollUp');    
-    win.on('scroll', function() {
-			if (win.scrollTop() > 150) {
-				totop.fadeIn();
-			} else {
-				totop.fadeOut();
-			}
-    });
-    totop.on('click', function() {
-			$("html,body").animate({
-				scrollTop: 0
-			}, 500)
-    });
     
 
     // View Course
