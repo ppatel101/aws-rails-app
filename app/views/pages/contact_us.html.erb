@@ -42,37 +42,32 @@
               </div>
               <div class="contact-wrap">
                 <div id="form-messages"></div>
-                <form id="contact-form1" method="post" action="#">
+                <%= form_with(model: @inquiry, url: create_inquiry_path, local: true, html: { id: "contact-form1", class: "contact-form" }) do |f| %>
                   <fieldset>
                     <div class="row">
                       <div class="col-lg-6 col-md-6 col-sm-6 mb-30">
-                        <input class="from-control" type="text" id="name" name="name"
-                          placeholder="Name" required="">
+                        <%= f.text_field :name, class: "from-control", placeholder: "Name", required: true %>
                       </div>
                       <div class="col-lg-6 col-md-6 col-sm-6 mb-30">
-                        <input class="from-control" type="text" id="email" name="email"
-                          placeholder="E-Mail" required="">
+                        <%= f.email_field :email, class: "from-control", placeholder: "E-Mail", required: true %>
                       </div>
                       <div class="col-lg-6 col-md-6 col-sm-6 mb-30">
-                        <input class="from-control" type="text" id="phone" name="phone"
-                          placeholder="Phone Number" required="">
+                        <%= f.text_field :phone_number, class: "from-control", placeholder: "Phone Number", required: true %>
                       </div>
                       <div class="col-lg-6 col-md-6 col-sm-6 mb-30">
-                        <input class="from-control" type="text" id="Website" name="subject"
-                          placeholder="Your Website" required="">
+                        <%= f.text_field :website, class: "from-control", placeholder: "Your Website", required: true %>
                       </div>
                       <div class="col-lg-12 mb-35">
-                        <textarea class="from-control" id="message" name="message"
-                          placeholder="Your message Here" required=""></textarea>
+                        <%= f.text_area :message, class: "from-control", placeholder: "Your message Here", required: true %>
                       </div>
                     </div>
                     <div class="btn-part">
                       <div class="form-group mb-0">
-                        <input class="readon submit" type="submit" value="Submit Now">
+                        <%= f.submit "Submit Now", class: "readon submit" %>
                       </div>
                     </div>
                   </fieldset>
-                </form>
+                <% end %>
               </div>
             </div>
           </div>
@@ -99,7 +94,7 @@
                     </div>
                     <div class="content-text">
                       <h2 class="title"><a href="#">Email us</a></h2>
-                      <a href="mailto:info@transparentalsolutions.com">info@transparentalsolutions.com</a>
+                      <a href="mailto: info@transparentalsolutions.com"> info@transparentalsolutions.com</a>
                     </div>
                   </div>
                 </div>
@@ -172,7 +167,7 @@
 							<li>
 								<i class="flaticon-email"></i>
 								<div class="desc">
-									<a href="mailto:info@transparentalsolutions.com">info@transparentalsolutions.com</a>
+									<a href="mailto: info@transparentalsolutions.com"> info@transparentalsolutions.com</a>
 								</div>
 							</li>
 							<li>

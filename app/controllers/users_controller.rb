@@ -4,6 +4,7 @@ class UsersController < ApplicationController
     def update 
       @user = User.find(params[:id])
       @user.update(users_params)
+      UserMailer.profile_update_notification(@user).deliver_now
     end
     def profile
       @id = current_user.id
