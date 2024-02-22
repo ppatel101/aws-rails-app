@@ -1,0 +1,36 @@
+<div class="full-width-header">
+	<header id="rs-header" class="rs-header style2 header-transparent">
+		<div class="menu-area menu-sticky">
+			<div class="container custom">
+				<div class="row-table">
+					<div class="col-cell header-logo">                                  
+						<div class="logo-area">
+							<a href="#">
+								<%= image_tag("logo-1.png", alt:"logo") %>  
+							</a>
+						</div>
+					</div>
+					<div class="col-cell">
+						<div class="rs-menu-area">
+							<div class="main-menu">
+								<nav class="rs-menu hidden-md">
+									<ul class="nav-menu">
+										<% if admin_signed_in? %>
+											<li class="">
+												<%= link_to "Log Out" , destroy_admin_session_path, method: :delete %>
+											</li>
+										<% else %>
+											<li class="">
+												<%= link_to "Log In" , new_admin_session_path %>
+											</li>
+										<% end %>
+									</ul>
+								</nav>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+</div>

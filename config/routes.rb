@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
+  devise_for :admins, path: 'admins', controllers: { sessions: "admins/sessions" }
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
@@ -11,6 +12,7 @@ Rails.application.routes.draw do
   get '/contact_us', to: 'pages#contact_us', as: 'contact_us_page'
   get 'users/profile', to: 'users#profile', as: 'user_profile'
   resources :users
+  resources :admins
   resources :inquiries
   post 'create_inquiry', to: 'pages#create_inquiry'
 end
