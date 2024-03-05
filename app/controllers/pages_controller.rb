@@ -11,6 +11,24 @@ class PagesController < ApplicationController
     end
   end
 
+  def career
+    respond_to do |format|
+      format.html
+    end
+  end
+
+  def job_posting
+    respond_to do |format|
+      format.html
+    end
+  end
+
+  def service
+    respond_to do |format|
+      format.html
+    end
+  end
+
   def contact_us
     @inquiry = Inquiry.new
     respond_to do |format|
