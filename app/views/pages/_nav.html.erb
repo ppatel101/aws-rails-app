@@ -21,22 +21,22 @@
 										<li class="<%= 'current-menu-item' if params[:action] == 'about' %>">
 											<%= link_to "About Us" , about_page_path, remote: false %>
 										</li>
-										<li class="menu-item-has-children service">
-											<a   href="#">Services</a>
+										<li class="menu-item-has-children service <%= 'current-menu-item' if params[:action] == 'service' %>">
+											<a   href="service">Services</a>
 											<ul class="sub-menu">
-												<li><a href="#">Custom Software Solutions</a></li>
-												<li><a href="#">IT Staffing & Services</a></li>
-												<li><a href="#">Managed IT Services</a></li>
+												<li><a href="service#custom">Custom Software Solutions</a></li>
+												<li><a href="service#staf">IT Staffing & Services</a></li>
+												<li><a href="service#it">Managed IT Services</a></li>
 											</ul>
 										</li>
 										<li class="<%= 'current-menu-item' if params[:action] == 'contact_us' %>">
 											<%= link_to "Contact" , contact_us_page_path %>
 										</li>
-										<li class="career">
-											<a   href="#">Careers</a>
+										<li class="<%= 'current-menu-item' if params[:action] == 'careers' %>">
+											<%= link_to "Careers" , careers_page_path %>
 										</li>
-										<li class="job-posting">
-											<a   href="#">Job Posting</a>
+										<li class="<%= 'current-menu-item' if params[:action] == 'job_posting' %>">
+											<%= link_to "Job posting" , job_posting_page_path %>
 										</li>
 										<% if current_user %>
 											<li class="">

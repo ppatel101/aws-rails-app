@@ -9,6 +9,9 @@ Rails.application.routes.draw do
   root 'pages#index'
   get 'pages/index'
   get '/about', to: 'pages#about', as: 'about_page'
+  get '/service', to: 'pages#service', as: 'service_page'
+  get '/careers', to: 'pages#careers', as: 'careers_page'
+  get '/job_posting', to: 'pages#job_posting', as: 'job_posting_page'
   get '/contact_us', to: 'pages#contact_us', as: 'contact_us_page'
   get 'users/profile', to: 'users#profile', as: 'user_profile'
   resources :users
