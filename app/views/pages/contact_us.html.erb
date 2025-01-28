@@ -1,236 +1,237 @@
-<body class="defult-home">
-	<div class="offwrap"></div>
-	  <div class="main-content">
-      <%= render "nav" %>
-      <div class="rs-breadcrumbs img1">
-        <div class="container">
-          <div class="breadcrumbs-inner">
-            <h1 class="page-title">
-              Contact Us
-              <span class="watermark">Contact Us</span>
-            </h1>
-            <span class="sub-text"> Establishes a connection between a competitor and a job</span>
-          </div>
-        </div>
+<% content_for :head do %>
+  <meta name="title" content="Contact Us | Transparental Solutions - IT Services and Consulting"/>
+  <meta name="description" content="Contact Us for any solutions regarding custom software solutions, IT staffing services, and managed IT services to help businesses thrive with innovative technology."/>
+<% end %>
+<div class="offwrap"></div>
+  <div class="main-content">
+  <%= render "nav" %>
+  <div class="rs-breadcrumbs img1">
+    <div class="container">
+      <div class="breadcrumbs-inner">
+        <h1 class="page-title">
+          Contact Us
+          <span class="watermark">Contact Us</span>
+        </h1>
+        <span class="sub-text"> Establishes a connection between a competitor and a job</span>
       </div>
-    
     </div>
-    <div class="rs-contact contact-style2 bg9 pt-100 pb-100 md-pt-70 md-pb-70">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-6 pr-40 md-pr-15 md-mb-50">
-              <div class="contact-map">
-               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2942.3357996976792!2d-83.42642458772491!3d42.48441317106138!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8824aff018289401%3A0x46966d5a963bf1cf!2sTransparental%20Solutions%20LLC!5e0!3m2!1sen!2sin!4v1709620505536!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="sec-title mb-45 md-mb-25">
-                <h2 class="title pb-20">
-                  Reach Us for Staffing and Recruiting Services
-                </h2>
-                <p class="">If you are looking for the best applicant or attempting to get your dream job,
-				Transparental Solutions is the ultimate solution. We associate with businesses to receive what they need
-                  in an applicant – and fabricate mutual connections with the candidate to coordinate them
-                  towards their passionate job.</p>
-                <p class="margin-0">We work with top Salesforce Consulting firms and designers in the USA to
-                  effortlessly convey commitment, fulfilling customers' cloud computing and Salesforce
-                  needs on a regular basis.
-                  Connect with us right away for more info.</p>
-              </div>
-              <div class="contact-wrap">
-                <div id="form-messages"></div>
-                <%= form_with(model: @inquiry, url: create_inquiry_path, local: true, html: { id: "contact-form1", class: "contact-form" }) do |f| %>
-                  <fieldset>
-                    <div class="row">
-                      <div class="col-lg-6 col-md-6 col-sm-6 mb-30">
-                        <%= f.text_field :name, class: "from-control", placeholder: "Name", required: true %>
-                      </div>
-                      <div class="col-lg-6 col-md-6 col-sm-6 mb-30">
-                        <%= f.email_field :email, class: "from-control", placeholder: "E-Mail", required: true %>
-                      </div>
-                      <div class="col-lg-6 col-md-6 col-sm-6 mb-30">
-                        <%= f.text_field :phone_number, class: "from-control", placeholder: "Phone Number", required: true %>
-                      </div>
-                      <div class="col-lg-6 col-md-6 col-sm-6 mb-30">
-                        <%= f.text_field :website, class: "from-control", placeholder: "Your Website", required: true %>
-                      </div>
-                      <div class="col-lg-12 mb-35">
-                        <%= f.text_area :message, class: "from-control", placeholder: "Your message Here", required: true %>
-                      </div>
-                    </div>
-                    <div class="btn-part">
-                      <div class="form-group mb-0">
-                        <%= f.submit "Submit Now", class: "readon submit" %>
-                      </div>
-                    </div>
-                  </fieldset>
-                <% end %>
-              </div>
-            </div>
+  </div>
+</div>
+<div class="rs-contact contact-style2 bg9 pt-100 pb-100 md-pt-70 md-pb-70">
+  <div class="container">
+    <div class="row">
+    <div class="col-lg-6 pr-40 md-pr-15 md-mb-50">
+      <div class="contact-map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2942.3357996976792!2d-83.42642458772491!3d42.48441317106138!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8824aff018289401%3A0x46966d5a963bf1cf!2sTransparental%20Solutions%20LLC!5e0!3m2!1sen!2sin!4v1709620505536!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="sec-title mb-45 md-mb-25">
+      <h2 class="title pb-20">
+        Reach Us for Staffing and Recruiting Services
+      </h2>
+      <p class="">If you are looking for the best applicant or attempting to get your dream job,
+      Transparental Solutions is the ultimate solution. We associate with businesses to receive what they need
+        in an applicant – and fabricate mutual connections with the candidate to coordinate them
+        towards their passionate job.</p>
+      <p class="margin-0">We work with top Salesforce Consulting firms and designers in the USA to
+        effortlessly convey commitment, fulfilling customers' cloud computing and Salesforce
+        needs on a regular basis.
+        Connect with us right away for more info.</p>
+      </div>
+      <div class="contact-wrap">
+      <div id="form-messages"></div>
+      <%= form_with(model: @inquiry, url: create_inquiry_path, local: true, html: { id: "contact-form1", class: "contact-form" }) do |f| %>
+        <fieldset>
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-6 mb-30">
+          <%= f.text_field :name, class: "from-control", placeholder: "Name", required: true %>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6 mb-30">
+          <%= f.email_field :email, class: "from-control", placeholder: "E-Mail", required: true %>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6 mb-30">
+          <%= f.text_field :phone_number, class: "from-control", placeholder: "Phone Number", required: true %>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6 mb-30">
+          <%= f.text_field :website, class: "from-control", placeholder: "Your Website", required: true %>
+          </div>
+          <div class="col-lg-12 mb-35">
+          <%= f.text_area :message, class: "from-control", placeholder: "Your message Here", required: true %>
           </div>
         </div>
-        <div class="rs-contact main-home">
-          <div class="container" style="max-width:1400px">
-            <div class="contact-icons-style box-address pt-100 md-pt-70">
-              <div class="row">
-                <div class="col-lg-4 col-md-4 col-sm-6 md-mb-30">
-                  <div class="contact-item">
-                    <div class="contact-icon">
-                      <%= image_tag("25.png", alt: "images") %>
-                    </div>
-                    <div class="content-text">
-                      <h2 class="title"><a href="#">USA office</a></h2>
-                      <p class="services-txt">38251 Remington park , Farmington Hills,MI,48331</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-6 xs-mb-30">
-                  <div class="contact-item">
-                    <div class="contact-icon">
-                      <%= image_tag("26.png", alt: "images") %>
-                    </div>
-                    <div class="content-text">
-                      <h2 class="title"><a href="#">Email us</a></h2>
-                      <a href="mailto: info@transparentalsolutions.com"> info@transparentalsolutions.com</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                  <div class="contact-item">
-                    <div class="contact-icon">
-                      <%= image_tag("27.png", alt: "images") %>
-                    </div>
-                    <div class="content-text">
-                      <h2 class="title"><a href="#">Call us</a></h2>
-                      <a href="tel:320-412-3138">320-412-3138</a>
-                    </div>
-                  </div>
-                </div>
+        <div class="btn-part">
+          <div class="form-group mb-0">
+          <%= f.submit "Submit Now", class: "readon submit" %>
+          </div>
+        </div>
+        </fieldset>
+      <% end %>
+      </div>
+    </div>
+    </div>
+  </div>
+  <div class="rs-contact main-home">
+    <div class="container" style="max-width:1400px">
+    <div class="contact-icons-style box-address pt-100 md-pt-70">
+      <div class="row">
+      <div class="col-lg-4 col-md-4 col-sm-6 md-mb-30">
+        <div class="contact-item">
+        <div class="contact-icon">
+          <%= image_tag("25.png", alt: "images") %>
+        </div>
+        <div class="content-text">
+          <h2 class="title"><a href="#">USA office</a></h2>
+          <p class="services-txt">38251 Remington park , Farmington Hills,MI,48331</p>
+        </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-6 xs-mb-30">
+        <div class="contact-item">
+        <div class="contact-icon">
+          <%= image_tag("26.png", alt: "images") %>
+        </div>
+        <div class="content-text">
+          <h2 class="title"><a href="#">Email us</a></h2>
+          <a href="mailto: info@transparentalsolutions.com"> info@transparentalsolutions.com</a>
+        </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-6">
+        <div class="contact-item">
+        <div class="contact-icon">
+          <%= image_tag("27.png", alt: "images") %>
+        </div>
+        <div class="content-text">
+          <h2 class="title"><a href="#">Call us</a></h2>
+          <a href="tel:320-412-3138">320-412-3138</a>
+        </div>
+        </div>
+      </div>
+      </div>
+    </div>
+    </div>
+  </div>
+  </div>
+<footer id="rs-footer" class="rs-footer style1">
+  <div class="footer-top">
+  <div class="container">
+    <div class="row">
+        <div class="col-lg-3 col-md-12 col-sm-12 md-mb-10">
+          <div class="footer-logo mb-40">
+            <a href="index.html"><%= image_tag("logo-1.png", alt: "") %></a>
+          </div>
+          <div class="textwidget white-color pb-40">
+            <p>Transparental Solutions LLC One who provides the most sophisticated and comprehensive end-to-end
+              Business Requirements and Solutions to our Customers, and forms an integral link in the
+              global supply chain.</p>
+          </div>
+          <ul class="footer-social md-mb-30">  
+            <li> 
+              <a href="https://www.facebook.com/people/Transparental-Solutions-LLC/100076633352325/?mibextid=uzlsIk" target="_blank"><span><i class="fa fa-facebook"></i></span></a> 
+            </li>
+            <li> 
+              <a href="#" target="_blank"><span><i class="fa fa-twitter"></i></span></a> 
+            </li>
+            <li> 
+              <a href=" https://www.linkedin.com/company/transparental-solutionsllc/?viewAsMember=true" target="_blank"><span><i class="fa fa-linkedin"></i></span></a> 
+            </li>
+            <li> 
+              <a href="#" target="_blank"><span><i class="fa fa-instagram"></i></span></a> 
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-12 col-sm-12 md-mb-10 pl-55 md-pl-15">
+          <h3 class="footer-title">Our Services</h3>
+          <ul class="site-map">
+            <li><a href="#">Custom Software Solutions</a></li>
+            <li><a href="#">IT Staffing & Services</a></li>
+            <li><a href="#">Managed IT Services</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-12 col-sm-12 md-mb-10">
+          <h3 class="footer-title">Contact Info</h3>
+          <ul class="address-widget">
+            <li>
+              <i class="flaticon-location"></i>
+              <div class="desc">38251 Remington park , Farmington Hills,MI,48331
               </div>
-            </div>
+            </li>
+            <li>
+              <i class="flaticon-call"></i>
+              <div class="desc">
+                <a href="tel:320-412-3138">320-412-3138</a>
+              </div>
+            </li>
+            <li>
+              <i class="flaticon-email"></i>
+              <div class="desc">
+                <a href="mailto: info@transparentalsolutions.com"> info@transparentalsolutions.com</a>
+              </div>
+            </li>
+            <li>
+              <i class="flaticon-clock-1"></i>
+              <div class="desc">
+                Office Hours: 9AM - 6PM
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-12 col-sm-12">
+          <h3 class="footer-title">Newsletter</h3>
+          <p class="widget-desc white-color">Stay up to update with our latest news and products.</p>
+          <p><a style="color:#FFF" href="#" title="My Visa Jobs" alt="My Visa Jobs"
+              target="_blank">MyvisaJobs</a></p>
+          <p><a style="color:#FFF" href="#" title="Glassdoor" alt="Glassdoor"
+              target="_blank">Glassdoor</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="row y-middle">
+        <div class="col-lg-8 md-mb-10 text-lg-end text-center order-last">
+          <ul class="copy-right-menu">
+            <li><%= link_to "Home" , root_path %></li>
+            <li><%= link_to "About Us" , about_page_path %></li>
+            <li><%= link_to "Service" , service_page_path %></li>
+            <li><%= link_to "Contact" , contact_us_page_path %></li>
+            <li><%= link_to "Careers" , careers_page_path %></li>
+            <li><%= link_to "Job posting" , job_posting_page_path %></li>
+          </ul>
+        </div>
+        <div class="col-lg-4">
+          <div class="copyright text-lg-start text-center ">
+            <p>Copyright ©2024 Transparental Solutions. All rights reserved.</p>
           </div>
         </div>
       </div>
-    <footer id="rs-footer" class="rs-footer style1">
-      <div class="footer-top">
-        <div class="container">
-          <div class="row">
-					<div class="col-lg-3 col-md-12 col-sm-12 md-mb-10">
-						<div class="footer-logo mb-40">
-							<a href="index.html"><%= image_tag("logo-1.png", alt: "") %></a>
-						</div>
-						<div class="textwidget white-color pb-40">
-							<p>Transparental Solutions LLC One who provides the most sophisticated and comprehensive end-to-end
-								Business Requirements and Solutions to our Customers, and forms an integral link in the
-								global supply chain.</p>
-						</div>
-						<ul class="footer-social md-mb-30">  
-							<li> 
-								<a href="https://www.facebook.com/people/Transparental-Solutions-LLC/100076633352325/?mibextid=uzlsIk" target="_blank"><span><i class="fa fa-facebook"></i></span></a> 
-							</li>
-							<li> 
-								<a href="#" target="_blank"><span><i class="fa fa-twitter"></i></span></a> 
-							</li>
-							<li> 
-								<a href=" https://www.linkedin.com/company/transparental-solutionsllc/?viewAsMember=true" target="_blank"><span><i class="fa fa-linkedin"></i></span></a> 
-							</li>
-							<li> 
-								<a href="#" target="_blank"><span><i class="fa fa-instagram"></i></span></a> 
-							</li>
-						</ul>
-					</div>
-					<div class="col-lg-3 col-md-12 col-sm-12 md-mb-10 pl-55 md-pl-15">
-						<h3 class="footer-title">Our Services</h3>
-						<ul class="site-map">
-							<li><a href="#">Custom Software Solutions</a></li>
-							<li><a href="#">IT Staffing & Services</a></li>
-							<li><a href="#">Managed IT Services</a></li>
-						</ul>
-					</div>
-					<div class="col-lg-3 col-md-12 col-sm-12 md-mb-10">
-						<h3 class="footer-title">Contact Info</h3>
-						<ul class="address-widget">
-							<li>
-								<i class="flaticon-location"></i>
-								<div class="desc">38251 Remington park , Farmington Hills,MI,48331
-								</div>
-							</li>
-							<li>
-								<i class="flaticon-call"></i>
-								<div class="desc">
-									<a href="tel:320-412-3138">320-412-3138</a>
-								</div>
-							</li>
-							<li>
-								<i class="flaticon-email"></i>
-								<div class="desc">
-									<a href="mailto: info@transparentalsolutions.com"> info@transparentalsolutions.com</a>
-								</div>
-							</li>
-							<li>
-								<i class="flaticon-clock-1"></i>
-								<div class="desc">
-									Office Hours: 9AM - 6PM
-								</div>
-							</li>
-						</ul>
-					</div>
-					<div class="col-lg-3 col-md-12 col-sm-12">
-						<h3 class="footer-title">Newsletter</h3>
-						<p class="widget-desc white-color">Stay up to update with our latest news and products.</p>
-						<p><a style="color:#FFF" href="#" title="My Visa Jobs" alt="My Visa Jobs"
-								target="_blank">MyvisaJobs</a></p>
-						<p><a style="color:#FFF" href="#" title="Glassdoor" alt="Glassdoor"
-								target="_blank">Glassdoor</a></p>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="footer-bottom">
-			<div class="container">
-				<div class="row y-middle">
-					<div class="col-lg-8 md-mb-10 text-lg-end text-center order-last">
-						<ul class="copy-right-menu">
-							<li><%= link_to "Home" , root_path %></li>
-							<li><%= link_to "About Us" , about_page_path %></li>
-							<li><%= link_to "Service" , service_page_path %></li>
-							<li><%= link_to "Contact" , contact_us_page_path %></li>
-							<li><%= link_to "Careers" , careers_page_path %></li>
-							<li><%= link_to "Job posting" , job_posting_page_path %></li>
-						</ul>
-					</div>
-					<div class="col-lg-4">
-						<div class="copyright text-lg-start text-center ">
-							<p>Copyright ©2024 Transparental Solutions. All rights reserved.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</footer>
-	<div id="scrollUp" class="orange-color"><!DOCTYPE html>
+    </div>
+  </div>
+</footer>
+<div id="scrollUp" class="orange-color"><!DOCTYPE html>
+
+  <i class="fa fa-angle-up"></i>
+</div>
+<div class="modal fade search-modal" id="searchModal" tabindex="-1">
+  <button type="button" class="close" data-bs-dismiss="modal">
+    <span class="flaticon-cross"></span>
+  </button>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="search-block clearfix">
+        <form>
+          <div class="form-group">
+            <input class="form-control" placeholder="Search Here..." type="text">
+            <button type="submit" value="Search"><i class="flaticon-search"></i></button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
   
-		<i class="fa fa-angle-up"></i>
-	</div>
-	<div class="modal fade search-modal" id="searchModal" tabindex="-1">
-		<button type="button" class="close" data-bs-dismiss="modal">
-			<span class="flaticon-cross"></span>
-		</button>
-		<div class="modal-dialog modal-dialog-centered">
-			<div class="modal-content">
-				<div class="search-block clearfix">
-					<form>
-						<div class="form-group">
-							<input class="form-control" placeholder="Search Here..." type="text">
-							<button type="submit" value="Search"><i class="flaticon-search"></i></button>
-						</div>
-					</form>
-				</div>
-			</div>
-		</div>
-	</div>
-	<script>
-		
-	</script>
-</body>
+</script>
 

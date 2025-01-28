@@ -1,6 +1,7 @@
-
-<head>     
-	<style>	
+<% content_for :head do %>
+  <meta name="title" content="Innovative Tech Solutions | Transparental Solutions - IT Services and Consulting"/>
+  <meta name="description" content="Transparental Solutions is a leading IT company providing innovative technology solutions, software development, and consulting services to empower businesses with digital transformation and growth."/>
+  <style>	
 		.sticky
 		{
 		background-color:#FFF!important;
@@ -31,8 +32,7 @@
 		@media (min-width: 992px) {
 		#introCarousel {
 		margin-top: -58.59px;
-		}
-		}
+		}}
 		.navbar .nav-link {
 		color: #fff !important;
 		}
@@ -67,8 +67,8 @@
 		content: "\f04c";
 		}  
 	</style>
-</head>
-<body class="defult-home">
+<% end %>
+
 	<div class="offwrap"></div>
 		<div class="main-content">
 			<%= render "nav" %>
@@ -575,102 +575,102 @@
 			</div>
 		</div>
 		<footer id="rs-footer" class="rs-footer style1">
-					<div class="footer-top">
-						<div class="container">
-							<div class="row">
-								<div class="col-lg-3 col-md-12 col-sm-12 md-mb-10">
-									<div class="footer-logo mb-10">
-										<a href="#"><%= image_tag("logo-1.png" , alt:"") %></a>
-									</div>
-									<div class="textwidget white-color pb-40"><p>Transparental Solutions LLC one who provides the most sophisticated and comprehensive end-to-end Business Requirements and Solutions to our Customers, and forms an integral link in the global supply chain.</p>
-									</div>
-									<ul class="footer-social md-mb-30">  
-										<li> 
-											<a href="https://www.facebook.com/people/Transparental-Solutions-LLC/100076633352325/?mibextid=uzlsIk" target="_blank"><span><i class="fa fa-facebook"></i></span></a> 
-										</li>
-										<li> 
-											<a href="#" target="_blank"><span><i class="fa fa-twitter"></i></span></a> 
-										</li>
-										<li> 
-											<a href=" https://www.linkedin.com/company/transparental-solutionsllc/?viewAsMember=true" target="_blank"><span><i class="fa fa-linkedin"></i></span></a> 
-										</li>
-										<li> 
-											<a href="#" target="_blank"><span><i class="fa fa-instagram"></i></span></a> 
-										</li>
-									</ul>
-								</div>
-								<div class="col-lg-3 col-md-12 col-sm-12 md-mb-10 pl-55 md-pl-15">
-									<h3 class="footer-title">Our Services</h3>
-									<ul class="site-map">
-										<li><a href="#">Custom Software Solutions</a></li>
-										<li><a href="#">IT Staffing & Services</a></li>
-										<li><a href="#">Managed IT Services</a></li>
-									</ul>
-								</div>
-								<div class="col-lg-3 col-md-12 col-sm-12 md-mb-10">
-									<h3 class="footer-title">Contact Info</h3>
-									<ul class="address-widget">
-										<li>
-											<i class="flaticon-location"></i>
-											<div class="desc ml-10">38251 Remington park , Farmington Hills,MI,48331
-											</div>
-											<div>
-										</li>
-										<li>
-											<i class="flaticon-call"></i>
-											<div class="desc ml-10">
-												<a href="tel:320-412-3138">320-412-3138</a>
-											</div>
-										</li>
-										<li>
-											<i class="flaticon-email"></i>
-											<div class="desc ml-10">
-												<a href="mailto:info@transparentalsolutions.com">info@transparentalsolutions.com</a>
-											</div>
-										</li>
-										<li>
-											<i class="flaticon-clock-1"></i>
-											<div class="desc ml-10">
-												Office Hours: 9AM - 6PM  
-											</div>
-										</li>
-									</ul>
-								</div>
-								<div class="col-lg-3 col-md-12 col-sm-12">
-									<h3 class="footer-title">Newsletter</h3>
-									<p class="widget-desc white-color">Stay up to update with our latest news and products.</p>
-									<!-- <p><a style="color:#FFF" href="https://h1bgrader.com/h1b-sponsors/cis-technologies-inc-d0g9egdvko/" title="H1B Sponsers" alt="H1B Sponsers" target="_blank">H1B Sponsers</a></p> -->
-									<p><a style="color:#FFF" href="#" title="My Visa Jobs" alt="My Visa Jobs" target="_blank">MyvisaJobs</a></p>
-									<p><a style="color:#FFF" href="#" title="Glassdoor" alt="Glassdoor" target="_blank">Glassdoor</a></p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="footer-bottom">
-						<div class="container">                    
-							<div class="row y-middle">
-								<div class="col-lg-8 md-mb-10 text-lg-end text-center order-last">
-									<ul class="copy-right-menu">
-									<li><%= link_to "Home" , root_path %></li>
-									<li><%= link_to "About Us" , about_page_path %></li>
-									<li><%= link_to "Service" , service_page_path %></li>
-									<li><%= link_to "Contact" , contact_us_page_path %></li>
-									<li><%= link_to "Careers" , careers_page_path %></li>
-									<li><%= link_to "Job posting" , job_posting_page_path %></li>
-									</ul>
-								</div>
-								<div class="col-lg-4">
-									<div class="copyright text-lg-start text-center ">
-										<p>Copyright ©2024 Transparental Solutions. All rights reserved.</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</footer>
-				<div id="scrollUp" class="orange-color">
-					<i class="fa fa-angle-up"></i>
-				</div>
+      <div class="footer-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-md-12 col-sm-12 md-mb-10">
+              <div class="footer-logo mb-10">
+                <a href="#"><%= image_tag("logo-1.png" , alt:"") %></a>
+              </div>
+              <div class="textwidget white-color pb-40"><p>Transparental Solutions LLC one who provides the most sophisticated and comprehensive end-to-end Business Requirements and Solutions to our Customers, and forms an integral link in the global supply chain.</p>
+              </div>
+              <ul class="footer-social md-mb-30">  
+                <li> 
+                  <a href="https://www.facebook.com/people/Transparental-Solutions-LLC/100076633352325/?mibextid=uzlsIk" target="_blank"><span><i class="fa fa-facebook"></i></span></a> 
+                </li>
+                <li> 
+                  <a href="#" target="_blank"><span><i class="fa fa-twitter"></i></span></a> 
+                </li>
+                <li> 
+                  <a href=" https://www.linkedin.com/company/transparental-solutionsllc/?viewAsMember=true" target="_blank"><span><i class="fa fa-linkedin"></i></span></a> 
+                </li>
+                <li> 
+                  <a href="#" target="_blank"><span><i class="fa fa-instagram"></i></span></a> 
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-md-12 col-sm-12 md-mb-10 pl-55 md-pl-15">
+              <h3 class="footer-title">Our Services</h3>
+              <ul class="site-map">
+                <li><a href="#">Custom Software Solutions</a></li>
+                <li><a href="#">IT Staffing & Services</a></li>
+                <li><a href="#">Managed IT Services</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-md-12 col-sm-12 md-mb-10">
+              <h3 class="footer-title">Contact Info</h3>
+              <ul class="address-widget">
+                <li>
+                  <i class="flaticon-location"></i>
+                  <div class="desc ml-10">38251 Remington park , Farmington Hills,MI,48331
+                  </div>
+                  <div>
+                </li>
+                <li>
+                  <i class="flaticon-call"></i>
+                  <div class="desc ml-10">
+                    <a href="tel:320-412-3138">320-412-3138</a>
+                  </div>
+                </li>
+                <li>
+                  <i class="flaticon-email"></i>
+                  <div class="desc ml-10">
+                    <a href="mailto:info@transparentalsolutions.com">info@transparentalsolutions.com</a>
+                  </div>
+                </li>
+                <li>
+                  <i class="flaticon-clock-1"></i>
+                  <div class="desc ml-10">
+                    Office Hours: 9AM - 6PM  
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-md-12 col-sm-12">
+              <h3 class="footer-title">Newsletter</h3>
+              <p class="widget-desc white-color">Stay up to update with our latest news and products.</p>
+              <!-- <p><a style="color:#FFF" href="https://h1bgrader.com/h1b-sponsors/cis-technologies-inc-d0g9egdvko/" title="H1B Sponsers" alt="H1B Sponsers" target="_blank">H1B Sponsers</a></p> -->
+              <p><a style="color:#FFF" href="#" title="My Visa Jobs" alt="My Visa Jobs" target="_blank">MyvisaJobs</a></p>
+              <p><a style="color:#FFF" href="#" title="Glassdoor" alt="Glassdoor" target="_blank">Glassdoor</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">                    
+          <div class="row y-middle">
+            <div class="col-lg-8 md-mb-10 text-lg-end text-center order-last">
+              <ul class="copy-right-menu">
+              <li><%= link_to "Home" , root_path %></li>
+              <li><%= link_to "About Us" , about_page_path %></li>
+              <li><%= link_to "Service" , service_page_path %></li>
+              <li><%= link_to "Contact" , contact_us_page_path %></li>
+              <li><%= link_to "Careers" , careers_page_path %></li>
+              <li><%= link_to "Job posting" , job_posting_page_path %></li>
+              </ul>
+            </div>
+            <div class="col-lg-4">
+              <div class="copyright text-lg-start text-center ">
+                <p>Copyright ©2024 Transparental Solutions. All rights reserved.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+      <div id="scrollUp" class="orange-color">
+        <i class="fa fa-angle-up"></i>
+      </div>
 		<div class="rs-blog style2 pt-100 pb-100 md-pt-70 md-pb-70" style="display:none">
 			<div class="container">
 				<div class="row y-middle md-mb-30">
@@ -680,7 +680,7 @@
 							<h2 class="title mb-23">Read our latest updates & business <span>tips & tricks.</span></h2>
 						</div>
 					</div>
-					<div class="col-lg-7 mb-20"><body class="defult-home">
+					<div class="col-lg-7 mb-20">
 						<div class="offwrap"></div>
 						<div class="main-content">
 							<div class="full-width-header">
