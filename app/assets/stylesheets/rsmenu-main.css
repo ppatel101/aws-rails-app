@@ -550,7 +550,7 @@ body .full-width-header .rs-header .menu-area .main-menu .rs-menu ul.nav-menu li
 	.rs-header .menu-area .logo-area {
 	    position: absolute;
 	    z-index: 1;
-	    top: 14px;
+	    top: 5px;
 	}
 	.rs-header .expand-btn {
 		display: none;
@@ -701,4 +701,12 @@ body .full-width-header .rs-header .menu-area .main-menu .rs-menu ul.nav-menu li
 	.nav-menu > li > a i {
 		display:none;
 	}
+}
+@media only screen and (max-width: 580px) 
+{
+	.rs-services.home-style2 .services-item {display: flex;}
+	.images-video{width: 60%;margin: 0 auto;}
+	.counter-area{display: flex;align-items: center;}
+	.counter-list{margin-right: 20px;}
+	.process-effects-layer .col-sm-6{width: 50%;flex: 0 0 50%;}
 }

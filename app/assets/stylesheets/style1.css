@@ -2315,6 +2315,7 @@ blockquote cite:before {
   transition: all 0.3s ease;
   position: fixed;
   overflow-y: auto;
+  height: 100vh;
 }
 .full-width-header .right_menu_togle .close-btn {
   overflow: visible;
