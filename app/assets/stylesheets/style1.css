@@ -8399,7 +8399,7 @@ body .search-modal .close:hover {
   margin: 0;
 }
 .rs-footer.style1 .footer-top p {
-  margin: 30px 0 0;
+  margin: 5px 0 0;
   position: relative;
 }
 .rs-footer.style1 .footer-top p input[type=email] {
@@ -9187,10 +9187,4 @@ body .search-modal .close:hover {
 	width:95%;
 	padding:5%;
 	padding-top:0px;
-}
-
-
-p
-{
-	text-align:justify;
 }
